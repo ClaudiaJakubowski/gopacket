@@ -49,7 +49,7 @@ type DecodingLayer interface {
 // values into specified slice. Returns either first encountered
 // unsupported LayerType value or decoding error. In case of success,
 // returns (LayerTypeZero, nil).
-type DecodingLayerFunc func([]byte, *[]LayerType) (LayerType, error)
+type DecodingLayerFunc func([]byte,  []LayerType) (LayerType, error)
 
 // DecodingLayerContainer stores all DecodingLayer-s and serves as a
 // searching tool for DecodingLayerParser.
@@ -348,3 +348,4 @@ type DecodingLayerParserOptions struct {
 	// slice).
 	IgnoreUnsupported bool
 }
+ 
